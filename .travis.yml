@@ -36,6 +36,7 @@ script:
 # Run the unit tests
 - python test_main.py
 # [START deploy]
+- export API_KEY
 # Deploy the app
 - gcloud -q app deploy app.yaml --promote
 # Run and end to end test
