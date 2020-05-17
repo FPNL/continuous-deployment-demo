@@ -34,9 +34,9 @@ install:
 - pip install -r requirements.txt -t lib/
 script:
 # Run the unit tests
+- export API_KEY
 - python test_main.py
 # [START deploy]
-- export API_KEY
 # Deploy the app
 - gcloud -q app deploy app.yaml --promote
 # Run and end to end test
