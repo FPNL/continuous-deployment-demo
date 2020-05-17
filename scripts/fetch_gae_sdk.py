@@ -23,10 +23,14 @@ Current releases are listed here:
 
 import json
 import os
-import StringIO
 import sys
 import urllib2
 import zipfile
+
+try:
+    from StringIO import StringIO ## for Python 2
+except ImportError:
+    from io import StringIO ## for Python 3
 
 _SDK_URL = (
     'https://www.googleapis.com/storage/v1/b/appengine-sdks/o?prefix=featured')
